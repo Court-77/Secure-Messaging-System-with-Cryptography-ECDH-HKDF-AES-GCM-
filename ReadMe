@@ -1,10 +1,10 @@
-**#  Secure Messaging System with Cryptography (ECDH, HKDF, AES-GCM)**
+#  Secure Messaging System with Cryptography (ECDH, HKDF, AES-GCM)
 
 A Python-based project that combines a chatbot interface with a secure messaging system and classical encryption methods.
 
 This project blends interactive functionality with real-world cryptographic concepts, including secure key exchange and authenticated encryption.
 
-Features
+# Features 
 Chatbot
 Simple interactive chatbot
 Responds to basic inputs such as:
@@ -13,7 +13,7 @@ greetings
 "your name"
 Encryption Menu
 
-Users can:
+# Users can:
 
 Encrypt and decrypt messages
 Choose from:
@@ -33,13 +33,14 @@ Allows both sides to derive a shared secret without transmitting it
 HKDF (HMAC-based Key Derivation Function)
 Converts the shared secret into a strong symmetric encryption key
 AES-GCM Encryption
-Provides:
+
+# Provides:
 Confidentiality (keeps data private)
 Integrity (detects tampering)
 Uses a unique nonce for each encryption
 Secure Communication Demo
 
-This project demonstrates a secure communication process:
+# This project demonstrates a secure communication process:
 
 Alice and Bob generate elliptic curve key pairs
 Public keys are exchanged
@@ -49,27 +50,28 @@ Messages are encrypted using AES-GCM
 
 This mirrors the fundamental principles behind secure communication protocols such as HTTPS/TLS.
 
-Technologies Used
+# Technologies Used:
 Python
 cryptography library
 Elliptic Curve Cryptography (ECC)
 AES-GCM
 HKDF
-How to Run
+
+# How to Run
 1. Install dependencies
 pip install cryptography
 
 Run the Program
 python3 chatbot.py
 
-Example Usage
+# Example Usage
 Shared keys match: True
 
 Alice: hello
 Encrypted: 9f8a...
 Bob receives: hello
 
-Learning Outcomes
+# Learning Outcomes
 This project demonstrates:
 
 Symmetric vs asymmetric encryption
@@ -78,14 +80,14 @@ Key derivation (HKDF)
 Authenticated encryption (AES-GCM)
 Structuring a Python application
 
-Future Improvements
+# Future Improvements
 Two-way encrypted chat
 Network-based communication (client/server)
 Digital signatures
 GUI interface
 Improved error handling
 
-Notes
+# Notes
 This project is for educational purposes
 It demonstrates cryptographic concepts in a simplified environment
 It is not intended for production use
