@@ -1,96 +1,104 @@
-#  Secure Messaging System with Cryptography (ECDH, HKDF, AES-GCM)
+# Secure Messaging System (ECDH + HKDF + AES-GCM)
 
-A Python-based project that combines a chatbot interface with a secure messaging system and classical encryption methods.
+A Python project that demonstrates how secure communication works using modern cryptography.
 
-This project blends interactive functionality with real-world cryptographic concepts, including secure key exchange and authenticated encryption.
+This system simulates two users (Alice and Bob) who generate a shared secret using Elliptic Curve Diffie-Hellman (ECDH), derive a symmetric key using HKDF, and communicate using AES-GCM encryption.
 
-# Features 
-Chatbot
-Simple interactive chatbot
-Responds to basic inputs such as:
-greetings
-"how are you"
-"your name"
-Encryption Menu
+---
 
-# Users can:
+## Features
 
-Encrypt and decrypt messages
-Choose from:
-Caesar Cipher
-Affine Cipher
-Reverse Cipher
-Secure messaging demo (ECDH + AES-GCM)
-Cryptography Concepts
-Classical Encryption
-Caesar Cipher
-Affine Cipher
-Reverse Cipher
-Modern Cryptography
-Elliptic Curve Diffie-Hellman (ECDH)
-Enables secure key exchange between two parties
-Allows both sides to derive a shared secret without transmitting it
-HKDF (HMAC-based Key Derivation Function)
-Converts the shared secret into a strong symmetric encryption key
-AES-GCM Encryption
+- ECC key generation (Elliptic Curve Cryptography)  
+- Secure key exchange using ECDH  
+- Key derivation using HKDF  
+- Authenticated encryption using AES-GCM  
+- Simulation of secure messaging between two parties  
 
-# Provides:
-Confidentiality (keeps data private)
-Integrity (detects tampering)
-Uses a unique nonce for each encryption
-Secure Communication Demo
+---
 
-# This project demonstrates a secure communication process:
+## Cryptography Concepts
 
-Alice and Bob generate elliptic curve key pairs
-Public keys are exchanged
-A shared secret is derived using ECDH
-HKDF derives a symmetric AES key
-Messages are encrypted using AES-GCM
+### Elliptic Curve Diffie-Hellman (ECDH)
+- Allows two parties to generate a shared secret without transmitting it  
+- Forms the foundation of secure key exchange  
 
-This mirrors the fundamental principles behind secure communication protocols such as HTTPS/TLS.
+### HKDF (HMAC-based Key Derivation Function)
+- Converts the shared secret into a strong symmetric key  
 
-# Technologies Used:
-Python
-cryptography library
-Elliptic Curve Cryptography (ECC)
-AES-GCM
-HKDF
+### AES-GCM Encryption
+- Provides:
+  - Confidentiality (keeps messages private)  
+  - Integrity (detects tampering)  
+- Uses a unique nonce for each encryption  
 
-# How to Run
-1. Install dependencies
+---
+
+## How It Works
+
+1. Alice and Bob generate their own ECC key pairs  
+2. Public keys are exchanged  
+3. Both derive the same shared secret using ECDH  
+4. HKDF converts the shared secret into an AES key  
+5. Alice encrypts a message using AES-GCM  
+6. Bob decrypts the message using the same key  
+
+---
+
+## Technologies Used
+
+- Python  
+- `cryptography` library  
+- Elliptic Curve Cryptography (ECC)  
+- AES-GCM  
+- HKDF  
+
+---
+
+## How to Run
+
+### 1. Install dependencies
+
+```bash
 pip install cryptography
+```
 
-Run the Program
+## Run the program
+
 python3 chatbot.py
 
-# Example Usage
+
+## Example Output
+
+--- Secure Messaging Demo ---
+
 Shared keys match: True
 
-Alice: hello
-Encrypted: 9f8a...
-Bob receives: hello
+Alice: hello  
+Encrypted: 9f8a...  
+Bob receives: hello  
 
-# Learning Outcomes
+## Learning Outcomes
+
 This project demonstrates:
 
-Symmetric vs asymmetric encryption
 Secure key exchange (ECDH)
 Key derivation (HKDF)
 Authenticated encryption (AES-GCM)
-Structuring a Python application
+Structuring a cryptographic system in Python
 
-# Future Improvements
-Two-way encrypted chat
+
+## Future Improvements
+Two-way encrypted messaging
 Network-based communication (client/server)
 Digital signatures
 GUI interface
 Improved error handling
 
-# Notes
-This project is for educational purposes
+## Notes
+This project is for educational purposes only
 It demonstrates cryptographic concepts in a simplified environment
 It is not intended for production use
 
-Author
+
+## Author
 Built as a personal project exploring cryptography, secure communication, and Python development.
